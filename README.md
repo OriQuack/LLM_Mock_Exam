@@ -13,13 +13,13 @@ OPENAI_API_KEY="API KEY HERE"
 
 ### 2. Install requirements
 ```bash
-pip install -r requirements.txt
+pip install -r ./requirements.txt
 sudo apt install texlive-xetex
 ```
 
 <br>
 
-### 3. Korean Font Install
+### 3. Install Korean Font
 #### In Ubuntu
 ```bash
 sudo apt-get install -y fonts-nanum
@@ -28,4 +28,13 @@ sudo fc-cache -fv
 
 #### In Window
 ```NanumBarunGothic.ttf``` 설치
+
 <br>
+
+### 4. modify & run main.py file
+main.py ```args``` dictionary에 필요한 정보를 입력
+
+실행:
+```bash
+python3 main.py
+```
