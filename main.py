@@ -1,13 +1,16 @@
 import pypandoc
-
 from gen import gen
 
+
 args = {}
-args["subject"] = "Programming Language and Compilers"
-args["q_type"] = "Short answer"
-args["q_type_explanation"] = "Question that requires students to write words or sentences or fill in table."
+
+# 원하는 argument로 변경
+args["subject"] = "Programming Language and Compiler"
+args["q_type"] = "Calculation"
+args["q_type_explanation"] = "Given a question, the student will calculate or find step-by-step procedure to find the answer."
 args["coverage"] = "Top Down Parser"
-args["reference"] = """Left Factoring
+args["reference"] = r"""
+Left Factoring
 
 What if my grammar does not have the LL(1) property?
 - Sometimes, we can transform the grammar.
@@ -25,13 +28,21 @@ For any A ∈ NT:
    - Z → β1 | β2 | … | βn
 
    where Z is a new element of NT.
-
-3. Repeat until no common prefixes remain.
 """
 
+# 문항 생성
 response = gen(args)
 
+# 문항 markdown 형식으로 저장
+yaml_header = r"""---
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{NanumGothic}
+---
+"""
+response = yaml_header + response
 with open("response.md", "w") as file:
     file.write(response)
-    
-pypandoc.convert_file("response.md", "pdf", outputfile="response.pdf")
+
+# 문항 pdf로 변환
+pypandoc.convert_file("response.md", "pdf", outputfile="response.pdf", extra_args=["--pdf-engine=xelatex"])

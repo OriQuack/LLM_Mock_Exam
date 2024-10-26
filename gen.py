@@ -46,4 +46,4 @@ def gen(args: dict):
             "reference": args.get("reference", ""),
         }
     )
-    return response
+    return response.content

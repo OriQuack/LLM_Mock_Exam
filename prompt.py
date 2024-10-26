@@ -30,6 +30,5 @@ Instruction:
 ###
 Identify main ideas in the reference. Use these main ideas to make practice questions.
 After all 10 questions, give KOREAN solutions for each question.
-Format your response in markdown.
 ###
 """
