@@ -19,7 +19,7 @@ sudo apt install texlive-xetex
 
 <br>
 
-### Korean Font Install
+### 3. Korean Font Install
 #### In Ubuntu
 ```bash
 sudo apt-get install -y fonts-nanum
@@ -27,5 +27,5 @@ sudo fc-cache -fv
 ```
 
 #### In Window
-1. ```streamlit/static/font/NanumBarunGothic.ttf``` 설치
+```NanumBarunGothic.ttf``` 설치
 <br>
