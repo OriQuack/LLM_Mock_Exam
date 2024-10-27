@@ -10,6 +10,8 @@ args["q_type_explanation"] = "Given a question, the student will calculate or fi
 args["q_type"] = "True and False"
 args["q_type_explanation"] = "Given a statement, the student will answer true or false."
 
+args["q_type"] = "Definition"
+args["q_type_explanation"] = "Given a statement, For questions where a word's definition is provided, the task is to write the correct word that matches the definition. The definition must be clear and should not include the answer word itself."
 """
 args = {}
 
