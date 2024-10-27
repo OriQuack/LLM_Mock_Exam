@@ -32,6 +32,7 @@ def gen(args: dict):
             "q_type_explanation",
             "coverage",
             "reference",
+            "User_Prompt"
         ],
     )
 
@@ -44,6 +45,7 @@ def gen(args: dict):
             "q_type_explanation": args.get("q_type_explanation", ""),
             "coverage": args.get("coverage", ""),
             "reference": args.get("reference", ""),
+            "User_Prompt": args.get("User_Prompt", ""),
         }
     )
     return response.content

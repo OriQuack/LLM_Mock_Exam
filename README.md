@@ -14,6 +14,7 @@ OPENAI_API_KEY="API KEY HERE"
 ### 2. Install requirements
 ```bash
 pip install -r ./requirements.txt
+sudo apt install pandoc
 sudo apt install texlive-xetex
 ```
 

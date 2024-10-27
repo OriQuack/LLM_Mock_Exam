@@ -30,6 +30,7 @@ For any A ∈ NT:
    where Z is a new element of NT.
 """
 args["User_Prompt"] = ""
+
 # 문항 생성
 response = gen(args)
 
