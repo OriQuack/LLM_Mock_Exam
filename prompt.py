@@ -6,7 +6,7 @@ You are a professor in {subject} in a college. You will make 10 English practice
 Please generate questions by following the steps provided below. Within each step, freely use a chain of thought approach as long as you adhere to all the instructions.
 Let's think step by step.
 
-Output format: Only 10 Questions and 10 Answers like actual exam style.
+Output format: Output subject and coverage at the top. Then output 10 Questions and 10 Answers like an actual exam style.
 
 #Step 1: Before creating questions, analyze the scope and guidelines for question creation. This is a preparation step to ensure the generation of high-quality, accurate questions. You should consider what factors to take into account when creating questions and think about how to create a diverse range of questions within the given scope.
 ##Question type:
