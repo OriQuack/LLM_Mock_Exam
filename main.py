@@ -19,18 +19,33 @@ args["q_type"] = "True and False"
 args["q_type_explanation"] = "Given a statement, the student will answer true or false."
 args["coverage"] = "Scanner, Context Free Grammar, Top Down Parser, Bottom Up Parser, Context Sensitive Analysis"
 args["reference"] = r"""
-1. Answer with either “true” or “false” for the following statements. [Total 15 points]
-(A) Expressive power of regular expression has the same expressive power of non-deterministic
-finite automata. ( ) [3 points]
-(B) If a language is specified with context-free grammar, this language can be parsed with either
-LL(1) parser or LR(1) parser. ( ) [3 points]
-(C) If a context-free grammar has a left recursion, it fails to satisfy LL(1) property. ( )
-[3 points]
-(D) If an attribute grammar has both synthesized attributes and inherited attributes, it will
-generate a circular dependence among attributes. ( ) [3 points]
-(E) If a CFG parses an input sentence into two different sequence of derivation steps by using the
-same derivation approach, either leftmost derivation or rightmost derivation, the corresponding
-grammar is ambiguous. ( ) [3 points]
+4. Answer the following questions about attribute grammar (AG)and ad-hoc syntax-directed
+translation (SDT). [total 20 points]
+
+Production Attribution Rules
+D → T L ; { L.in := T.type }
+T → int { T.type := integer }
+| float { T.type := real }
+L0 → L1 , id { L1.in := L0.in; addtype (word(id), L0.in); }
+| id { addtype (word(id), L0.in) }
+( non-terminals = { D, T, L }, terminals = { int, float, id, ;, , } )
+- word ( id ) returns the input string (variable names) which matches with the token, id.
+- addtype ( string, type ) inserts an entry in the symbol table, where its variable name
+corresponds to string and its type corresponds to type.
+
+(A) The above AG describes a method to build a simple symbol table. For each non-terminal, list
+its attributes and categorize them with their characteristics. [5 points]
+
+(B) Assuming an input is given as follows, draw the parse tree for the input and specify
+dependence among attributes [5 point]
+
+(C) Write an ad-hoc SDT to build the symbol table in a similar way to the above AG [10 points].
+Use the following functions in the code. If needed, define necessary functions with descriptions
+of their internal works.
+
+addType(type, list): insert items in list with type
+list_create(): create an empty list and return it.
+list_add(L, id): add an item id into the list L. and return the list with added item.
 """
 args["User_Prompt"] = ""
 

@@ -28,6 +28,7 @@ def gen(args: dict):
         template=prompt_template,
         input_variables=[
             "subject",
+            "num",
             "q_type",
             "q_type_explanation",
             "coverage",
@@ -41,6 +42,7 @@ def gen(args: dict):
     response = chain.invoke(
         {
             "subject": args.get("subject", ""),
+            "num": 3,
             "q_type": args.get("q_type", ""),
             "q_type_explanation": args.get("q_type_explanation", ""),
             "coverage": args.get("coverage", ""),
