@@ -31,6 +31,11 @@ Next third questions are advanced questions. Students will have to apply the lea
 {reference}
 ###
 
+##User Prompt: If empty, then ignore.
+###
+{User_Prompt}
+###
+
 #Step 2:
 Instruction: Use these analyze to make practice questions.
 ##Guidelines
